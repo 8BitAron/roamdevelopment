@@ -11,7 +11,7 @@ services:
     volumes:
       - /opt/ghost_content:/var/lib/ghost/content
     environment:
-      url: ${domain}
+      url: ${DOMAIN}
       database__client: mysql
       database__connection__host: db
       database__connection__user: ${DB_USER}
