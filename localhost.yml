@@ -1,0 +1,9 @@
+version: '3.7'
+
+services:
+  ghost:
+    volumes:
+      - /opt/ghost_content:/var/lib/ghost/content
+  db:
+    volumes:
+      - /opt/ghost_mysql:/var/lib/mysql

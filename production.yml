@@ -1,0 +1,15 @@
+version: '3.7'
+services:
+  nginx:
+    build:
+      context: ./nginx
+      dockerfile: nginx.Dockerfile
+    restart: always
+    depends_on:
+      - ghost
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+       - /etc/letsencrypt/:/etc/letsencrypt/
+       - /usr/share/nginx/html:/usr/share/nginx/html
